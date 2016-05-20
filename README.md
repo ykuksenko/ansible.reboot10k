@@ -1,7 +1,7 @@
-reboot10k
+reboot10k (ansible role)
 =========
 
-Simple reboot role.
+Simple reboot role for ansible.
 
 Name is a inspired by the r10k ruby gem, which is a great, unrelated, idea.
 
@@ -45,8 +45,8 @@ GPLv3
 Author Information
 ------------------
 
-Jesse Lang - said to put it on Ansible Galaxy.
+[Jesse Lang](https://github.com/jesselang) - said to put it on Ansible Galaxy.
 
-Lloyd Benson - added the reboot delay. also needed to reboot a computer.
+[Lloyd Benson](https://github.com/lloydbenson) - added the reboot delay. also needed to reboot a computer.
 
 Yevgeniy Kuksenko - needed to reboot a computer. got to name the role.
