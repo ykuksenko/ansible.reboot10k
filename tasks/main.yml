@@ -1,0 +1,21 @@
+---
+- name: reboot
+  command: '/usr/sbin/shutdown -r +1 "ansible: about to reboot, logout please"'
+  ignore_errors: true
+  async: 0
+  poll: 0
+  become: true
+
+- name: wait for ssh port to come down
+  local_action: >
+    wait_for
+    port="{{ reboot10k_watch_port | default(22) }}"
+    host="{{ ansible_host }}"
+    state=stopped
+
+- name: wait for shh port to come back up
+  local_action: >
+    wait_for
+    port="{{ reboot10k_watch_port | default(22) }}"
+    host="{{ ansible_host }}"
+    state=started
